@@ -9,10 +9,8 @@ function replaceContentsSync(file, content) {
 }
 
 gulp.task("default", () => {
-	//const dir = 'c:\\!git\\flashspring\\flashspring\\htmlprojects\\libs\\closure\\closure';
-	const dir = 'C:/!git/flashspring/flashspring/htmlprojects/src';
-	//const filesMask = `${dir}\\**\\*.js`;
-	const filesMask = `${dir}\\**\\TooltipManager.js`;
+	const dir = '.';
+	const filesMask = `${dir}\\**\\*.js`;
 	return gulp.src(filesMask)
 		.pipe(modify({
 			fileModifier: replaceContentsSync,
